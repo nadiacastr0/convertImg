@@ -17,3 +17,45 @@ body {
 .bg-primary { background: var(--color-primary); color: #fff; }
 .mt-2 { margin-top: var(--spacing-lg); }
 .mb-2 { margin-bottom: var(--spacing-lg); }
+
+/* HEADER */
+.header {
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: var(--font-lg);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
