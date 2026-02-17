@@ -1,0 +1,13 @@
+/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SN Pro", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
