@@ -13,7 +13,7 @@
 </head>
 
 <body>
-     <!-- HEADER -->
+    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="logo">ConvertImg</div>
@@ -30,6 +30,20 @@
         </div>
     </header>
     <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Image Conversion</h1>
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="formatSelect">Convert to</label>
+            <select id="formatSelect">
+                <option value="image/png">PNG</option>
+                <option value="image/jpeg">JPG</option>
+                <option value="image/webp">WEBP</option>
+            </select>
+            <button id="convertBtn" class="btn btn-light">Convert</button>
+            <div id="preview"></div>
+        </div>
+    </section>
     <!-- ABOUT -->
     <!-- BENEFITS -->
     <!-- CTA -->
