@@ -1,100 +1,110 @@
 <!doctype html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6177594265426395"
+      crossorigin="anonymous"
+    ></script>
     <title>ConvertImg</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <div class="logo">ConvertImg</div>
+      <div class="container">
+        <div class="logo">ConvertImg</div>
 
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#cta">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#cta">Contact</a></li>
+          </ul>
+        </nav>
 
-            <button class="menu-toggle" id="menu-toggle">☰</button>
-        </div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+      </div>
     </header>
     <!-- HERO -->
     <section class="hero">
-        <div class="container">
-            <h1>Image Conversion</h1>
-            <input type="file" id="imageUpload" accept="image/*">
-            <label for="formatSelect">Convert to</label>
-            <select id="formatSelect">
-                <option value="image/png">PNG</option>
-                <option value="image/jpeg">JPG</option>
-                <option value="image/webp">WEBP</option>
-            </select>
-            <button id="convertBtn" class="btn btn-light">Convert</button>
-            <div id="preview"></div>
-        </div>
+      <div class="container">
+        <h1>Image Conversion</h1>
+        <input type="file" id="imageUpload" accept="image/*" />
+        <label for="formatSelect">Convert to</label>
+        <select id="formatSelect">
+          <option value="image/png">PNG</option>
+          <option value="image/jpeg">JPG</option>
+          <option value="image/webp">WEBP</option>
+        </select>
+        <button id="convertBtn" class="btn btn-light">Convert</button>
+        <div id="preview"></div>
+      </div>
     </section>
     <!-- ABOUT -->
     <section id="about" class="section">
-        <div class="container">
-            <h2>About</h2>
-            <p>
-                ConvertImg is a simple and practical tool for converting images between different formats.
-                Simply upload, choose the desired format, and download your converted image.
-            </p>
-        </div>
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          ConvertImg is a simple and practical tool for converting images
+          between different formats. Simply upload, choose the desired format,
+          and download your converted image.
+        </p>
+      </div>
     </section>
     <!-- BENEFITS -->
     <section id="benefits" class="section bg-light">
-        <div class="container">
-            <h2>Benefits</h2>
+      <div class="container">
+        <h2>Benefits</h2>
 
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Fast</h3>
-                    <p>Instant conversion without complications.</p>
-                </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Fast</h3>
+            <p>Instant conversion without complications.</p>
+          </div>
 
-                <div class="card">
-                    <h3>Insurance</h3>
-                    <p>Your images are not stored.</p>
-                </div>
+          <div class="card">
+            <h3>Insurance</h3>
+            <p>Your images are not stored.</p>
+          </div>
 
-                <div class="card">
-                    <h3>Versatile</h3>
-                    <p>Support for multiple popular formats.</p>
-                </div>
-            </div>
+          <div class="card">
+            <h3>Versatile</h3>
+            <p>Support for multiple popular formats.</p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- CTA -->
     <section id="cta" class="section cta">
-        <div class="container text-center">
-            <h2>Connect with us</h2>
-            <p>Follow our social media channels for news and support.</p>
-            <div class="social-icons">
-                <a href="https://github.com/nadiacastr0" target="_blank" class="icon"><i
-                        class="fa-brands fa-github-alt"></i></a>
-            </div>
+      <div class="container text-center">
+        <h2>Connect with us</h2>
+        <p>Follow our social media channels for news and support.</p>
+        <div class="social-icons">
+          <a href="https://github.com/nadiacastr0" target="_blank" class="icon"
+            ><i class="fa-brands fa-github-alt"></i
+          ></a>
         </div>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> ConvertImg. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; <span id="year"></span> ConvertImg. All rights reserved.</p>
+        <a href="privacy.html">Política de Privacidade</a>
+      </div>
     </footer>
     <script src="scripts/js/main.js" defer></script>
-</body>
-
+  </body>
 </html>
