@@ -3,6 +3,7 @@ const preview = document.getElementById("preview");
 const convertBtn = document.getElementById("convertBtn");
 const formatSelect = document.getElementById("formatSelect");
 let currentImage = null;
+let convertedFormats = new Set();
 
 function createImage(src) {
   const img = document.createElement("img");
@@ -14,10 +15,11 @@ function createImage(src) {
 
 input.addEventListener("change", () => {
   preview.innerHTML = "";
+  convertedFormats.clear();
   const file = input.files[0];
 
   if (!file || !file.type.startsWith("image/")) {
-    alert("Please select only image files.");
+    alert("Por favor, selecione apenas arquivos de imagem.");
     return;
   }
 
@@ -36,6 +38,14 @@ convertBtn.addEventListener("click", () => {
   }
 
   const format = formatSelect.value;
+
+  if (convertedFormats.has(format)) {
+    alert(
+      `A imagem já foi convertida para ${format.split("/")[1].toUpperCase()}.`,
+    );
+    return;
+  }
+
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
   canvas.width = currentImage.naturalWidth;
@@ -43,6 +53,23 @@ convertBtn.addEventListener("click", () => {
   ctx.drawImage(currentImage, 0, 0);
 
   const convertedData = canvas.toDataURL(format);
-
   preview.appendChild(createImage(convertedData));
+
+  const downloadBtn = document.createElement("button");
+  downloadBtn.textContent = `Baixar ${format.split("/")[1].toUpperCase()}`;
+  downloadBtn.onclick = () => {
+    const a = document.createElement("a");
+    a.href = convertedData;
+    a.download = `imagem_convertida.${format.split("/")[1]}`;
+    a.click();
+  };
+  preview.appendChild(downloadBtn);
+
+  convertedFormats.add(format);
+});
+
+formatSelect.addEventListener("change", () => {
+  if (!currentImage) return;
+  preview.innerHTML = "";
+  preview.appendChild(currentImage);
 });
