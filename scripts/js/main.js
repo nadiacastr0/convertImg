@@ -1,5 +1,7 @@
 const input = document.getElementById("imageUpload");
 const preview = document.getElementById("preview");
+const convertBtn = document.getElementById("convertBtn");
+const formatSelect = document.getElementById("formatSelect");
 let currentImage = null;
 
 function createImage(src) {
@@ -25,4 +27,22 @@ input.addEventListener("change", () => {
     preview.appendChild(currentImage);
   };
   reader.readAsDataURL(file);
+});
+
+convertBtn.addEventListener("click", () => {
+  if (!currentImage) {
+    alert("Nenhuma imagem carregada.");
+    return;
+  }
+
+  const format = formatSelect.value;
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  canvas.width = currentImage.naturalWidth;
+  canvas.height = currentImage.naturalHeight;
+  ctx.drawImage(currentImage, 0, 0);
+
+  const convertedData = canvas.toDataURL(format);
+
+  preview.appendChild(createImage(convertedData));
 });
